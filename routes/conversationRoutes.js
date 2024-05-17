@@ -1,8 +1,8 @@
 const Conversation = require("../schemas/conversationSchema");
-const MessageHistory = require("../schemas/messageHistorySchema")
-const express = require("express")
-const router = express.Router()
-const verifyToken = require("../verifyToken")
+const MessageHistory = require("../schemas/messageHistorySchema");
+const express = require("express");
+const router = express.Router();
+const verifyToken = require("../verifyToken");
 
 router.get("/", async (req, res) => {
   try {
@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
 
   try {
     const savedConversation = await newConversation.save();
-    console.log(savedConversation)
+    console.log(savedConversation);
     res.status(201).json(savedConversation);
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -80,4 +80,4 @@ router.delete("/all/:id", async (req, res) => {
   }
 });
 
-module.exports = router
+module.exports = router;

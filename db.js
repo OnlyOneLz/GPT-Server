@@ -10,4 +10,4 @@ mongoose.connection.on("error", (err) => {
   console.error(`Error connecting to the database: ${err}`);
 });
 
-module.exports = mongoose.connection
+module.exports = mongoose.connection;

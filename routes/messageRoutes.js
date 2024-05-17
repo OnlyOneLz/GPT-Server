@@ -1,5 +1,5 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 const MessageHistory = require("../schemas/messageHistorySchema");
 
 // GET all messages
@@ -59,4 +59,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = router
+module.exports = router;
